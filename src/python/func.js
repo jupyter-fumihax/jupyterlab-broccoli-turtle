@@ -28,44 +28,64 @@ const Order = {
 //
 //const notImplementedMsg = 'Not implemented';
 
-export function text_nocrlf_print(block) {
-  const msg = BlocklyGene.valueToCode(block, 'TEXT', Order.NONE) || "''";
-  return 'print(' + msg + ', end="")\n';
-};
-
 export function turtle_init(block) {
-  const msg = 'from jturtle import *\n' +
+  const xsz = BlocklyGene.valueToCode(block, 'XSIZE', Order.NONE) || "''";
+  const ysz = BlocklyGene.valueToCode(block, 'YSIZE', Order.NONE) || "''";
+  const msg = 'from bturtle import *\n' +
               'from math import * \n\n' +
-              'init()\n';
+              'turtle = BTurtle(' + xsz + ',' + ysz + ')\n';
   return msg;
 };
 
-export function turtle_done(block) {
-  return 'done()\n';
+export function turtle_speed(block) {
+  const val = BlocklyGene.valueToCode(block, 'VAL', Order.NONE) || "''";
+  return 'turtle.speed(' + val + ')\n';
+};
+
+export function turtle_width(block) {
+  const val = BlocklyGene.valueToCode(block, 'VAL', Order.NONE) || "''";
+  return 'turtle.line_width(' + val + ')\n';
+};
+
+export function turtle_color(block) {
+  const val = BlocklyGene.valueToCode(block, 'VAL', Order.NONE) || "''";
+  return 'turtle.line_color(' + val + ')\n';
+};
+
+export function turtle_hsv(block) {
+  const hh = BlocklyGene.valueToCode(block, 'VAL', Order.NONE) || "''";
+  return 'turtle.line_hsv(' + hh + ')\n';
 };
 
 export function turtle_pen_up(block) {
-  return 'penup()\n';
+  return 'turtle.pen_up()\n';
 };
 
 export function turtle_pen_down(block) {
-  return 'pendown()\n';
+  return 'turtle.pen_down()\n';
 };
 
 export function turtle_forward(block) {
-  const val = BlocklyGene.valueToCode(block, 'NUM', Order.NONE) || "''";
-  return 'forward(' + val + ')\n';
+  const val = BlocklyGene.valueToCode(block, 'VAL', Order.NONE) || "''";
+  return 'turtle.forward(' + val + ')\n';
 };
 
 export function turtle_turn_right(block) {
-  const val = BlocklyGene.valueToCode(block, 'NUM', Order.NONE) || "''";
-  return 'right(' + val + ')\n';
+  const val = BlocklyGene.valueToCode(block, 'VAL', Order.NONE) || "''";
+  return 'turtle.turn_right(' + val + ')\n';
 };
 
 export function turtle_turn_left(block) {
-  const val = BlocklyGene.valueToCode(block, 'NUM', Order.NONE) || "''";
-  return 'left(' + val + ')\n';
+  const val = BlocklyGene.valueToCode(block, 'VAL', Order.NONE) || "''";
+  return 'turtle.turn_left(' + val + ')\n';
 };
+
+export function turtle_move(block) {
+  const xp = BlocklyGene.valueToCode(block, 'XPOS', Order.NONE) || "''";
+  const yp = BlocklyGene.valueToCode(block, 'YPOS', Order.NONE) || "''";
+  return 'turtle.move(' + xp + ',' + yp + ')\n';
+};
+
 /**/
 
 
