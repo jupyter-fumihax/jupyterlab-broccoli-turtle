@@ -33,7 +33,7 @@ export function turtle_init(block) {
   const ysz = BlocklyGene.valueToCode(block, 'YSIZE', Order.NONE) || "''";
   const msg = 'from bturtle import *\n' +
               'from math import * \n\n' +
-              'turtle = BTurtle(' + xsz + ',' + ysz + ')\n';
+              'turtle = BTurtle(' + xsz + ', ' + ysz + ')\n';
   return msg;
 };
 
@@ -56,7 +56,7 @@ export function turtle_line_hsv(block) {
   const hh = BlocklyGene.valueToCode(block, 'H', Order.NONE) || "''";
   const ss = BlocklyGene.valueToCode(block, 'S', Order.NONE) || "''";
   const vv = BlocklyGene.valueToCode(block, 'V', Order.NONE) || "''";
-  return 'turtle.line_hsv(' + hh + ',' + ss + ',' + vv + ')\n';
+  return 'turtle.line_hsv(' + hh + ', ' + ss + ', ' + vv + ')\n';
 };
 
 export function turtle_pen_up(block) {
@@ -85,7 +85,7 @@ export function turtle_turn_left(block) {
 export function turtle_move(block) {
   const xp = BlocklyGene.valueToCode(block, 'XPOS', Order.NONE) || "''";
   const yp = BlocklyGene.valueToCode(block, 'YPOS', Order.NONE) || "''";
-  return 'turtle.move(' + xp + ',' + yp + ')\n';
+  return 'turtle.move(' + xp + ', ' + yp + ')\n';
 };
 
 /**/
