@@ -147,7 +147,7 @@ class BTurtle:
         else:           # hh>=300 and hh<360
             rc = aa
             gc = bb
-            bc = (360 - hh)/50*(aa - bb) +bb
+            bc = (360 - hh)/50*(aa - bb) + bb
         #
         self.lclr = (int(rc*255), int(gc*255), int(bc*255))
         
