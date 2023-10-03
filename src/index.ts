@@ -25,7 +25,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
     );
 
     // Localization 
-    let language = (register as BlocklyRegistry).language;
+    const language = (register as BlocklyRegistry).language;
     import(`./msg/${language}.js`)
     .catch(() => {
       if (language !== 'En') {

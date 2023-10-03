@@ -11,7 +11,10 @@ Blockly.Msg['BLOCK_TURTLE_YSIZE'] = 'たての大きさ';
 Blockly.Msg['BLOCK_TURTLE_SPEED'] = 'タートル: ペンの速さ';
 Blockly.Msg['BLOCK_TURTLE_WIDTH'] = 'タートル: ペンの太さ';
 Blockly.Msg['BLOCK_TURTLE_COLOR'] = 'タートル: ペンの色';
-Blockly.Msg['BLOCK_TURTLE_HSV'] = 'タートル: ペンの色（色相）';
+Blockly.Msg['BLOCK_TURTLE_HSV'] = 'タートル: ペンの色相';
+Blockly.Msg['BLOCK_TURTLE_HSV_H'] = '色相';
+Blockly.Msg['BLOCK_TURTLE_HSV_S'] = '彩度';
+Blockly.Msg['BLOCK_TURTLE_HSV_V'] = '明度';
 
 Blockly.Msg['BLOCK_TURTLE_PEN_UP'] = 'タートル: ペンを上げる';
 Blockly.Msg['BLOCK_TURTLE_PEN_DOWN'] = 'タートル: ペンを下ろす';

@@ -26,7 +26,7 @@ const Order = {
 };
 
 //
-//const notImplementedMsg = 'Not implemented';
+//const notImplementedMsg = 'Not implemented at this Kernel';
 
 export function turtle_init(block) {
   const xsz = BlocklyGene.valueToCode(block, 'XSIZE', Order.NONE) || "''";
@@ -42,19 +42,21 @@ export function turtle_speed(block) {
   return 'turtle.speed(' + val + ')\n';
 };
 
-export function turtle_width(block) {
+export function turtle_line_width(block) {
   const val = BlocklyGene.valueToCode(block, 'VAL', Order.NONE) || "''";
   return 'turtle.line_width(' + val + ')\n';
 };
 
-export function turtle_color(block) {
+export function turtle_line_color(block) {
   const val = BlocklyGene.valueToCode(block, 'VAL', Order.NONE) || "''";
   return 'turtle.line_color(' + val + ')\n';
 };
 
-export function turtle_hsv(block) {
-  const hh = BlocklyGene.valueToCode(block, 'VAL', Order.NONE) || "''";
-  return 'turtle.line_hsv(' + hh + ')\n';
+export function turtle_line_hsv(block) {
+  const hh = BlocklyGene.valueToCode(block, 'H', Order.NONE) || "''";
+  const ss = BlocklyGene.valueToCode(block, 'S', Order.NONE) || "''";
+  const vv = BlocklyGene.valueToCode(block, 'V', Order.NONE) || "''";
+  return 'turtle.line_hsv(' + hh + ',' + ss + ',' + vv + ')\n';
 };
 
 export function turtle_pen_up(block) {

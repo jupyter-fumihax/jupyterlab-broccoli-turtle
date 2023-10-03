@@ -16,13 +16,13 @@ class BTurtle:
     def init(self, xs, ys):
         self.xs   = xs
         self.ys   = ys
+        self.spd  = 2
         self.lwdt = 2
         self.lclr = (0, 0, 0)
         self.bclr = (240, 240, 240)
-        self.cos  = 1
-        self.sin  = 0
-        self.th   = 0
-        self.spd  = 1
+        self.th   = 0       # angle
+        self.cos  = 1       # sin(th)
+        self.sin  = 0       # cos(th)
         self.xx   = self.xs/2
         self.yy   = self.ys/2
         self.pend = True       
@@ -115,13 +115,16 @@ class BTurtle:
         self.lwdt = lwdt
 
 
-    def line_hsv(self, hh):
-        ss = 0.45
-        vv = 0.65
+    def line_hsv(self, hh, ss, vv):
+        hh = hh%360
+        if (hh<0): hh = hh + 360
+        if (ss<0.0):   ss = 0.0 
+        elif (ss>1.0): ss = 1.0
+        if (vv<0.0):   vv = 0.0 
+        elif (vv>1.0): vv = 1.0
+        #
         aa = vv
         bb = vv - vv*ss
-        hh = hh%360
-        #
         if (hh>=0 and hh<60):
             rc = aa
             gc = (hh/60)*(aa - bb) + bb
