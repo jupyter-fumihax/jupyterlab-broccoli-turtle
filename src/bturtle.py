@@ -4,7 +4,6 @@ from math import *
 from time import *
 from PIL  import Image, ImageDraw
 from IPython.display import display, clear_output
-import ipywidgets as widgets
 
 
 class BTurtle:
