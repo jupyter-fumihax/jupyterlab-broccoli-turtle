@@ -19,5 +19,5 @@ pip install jupyterlab-broccoli-turtle
 ```
 
 ## Screen Shot
-<img width="70%" src="https://github.com/fiseki/jupyterlab-broccoli-turtle/assets/95947474/b620ef04-ce52-4c7f-b426-9830baed25b3">
+<img width="70%" src="https://user-images.githubusercontent.com/95947474/272455999-b620ef04-ce52-4c7f-b426-9830baed25b3.png">
 <br>
