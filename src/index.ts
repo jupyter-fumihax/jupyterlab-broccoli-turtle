@@ -3,7 +3,7 @@ import {
   JupyterFrontEndPlugin
 } from '@jupyterlab/application';
 import { IBlocklyRegistry, BlocklyRegistry } from 'jupyterlab-broccoli';
-//import { ITranslator, nullTranslator } from '@jupyterlab/translation';
+import { ITranslator, nullTranslator } from '@jupyterlab/translation';
 
 import { TOOLBOX } from './blocks';
 import * as func_python from './python/func.js';
@@ -33,10 +33,9 @@ const plugin: JupyterFrontEndPlugin<void> = {
         .catch(() => {});
       }
     });
-    //const trans = (translator || nullTranslator).load('jupyterlab');
+    const trans = (translator || nullTranslator).load('jupyterlab');
 
-    register.registerToolbox('default', TOOLBOX);
-    //register.registerToolbox('turtle', TOOLBOX);
+    register.registerToolbox(trans.__('turtle'), TOOLBOX);
 
     register.registerCodes('python', func_python);
     register.registerCodes('javascript', func_js);
