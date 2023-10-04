@@ -1,8 +1,9 @@
 {
   "name": "jupyterlab-broccoli-turtle",
   "version": "0.1.0",
-  "description": "Template of Blockly extension for JupyterLab.",
+  "description": "Simple Turtle Blocks of Blockly extension for JupyterLab.",
   "keywords": [
+    "turtle",
     "blockly",
     "jupyter",
     "jupyterlab",
@@ -14,8 +15,8 @@
   },
   "license": "BSD-3-Clause",
   "author": {
-    "name": "Denisa Checiu",
-    "email": "denisa.checiu@quantstack.net"
+    "name": "Fumi.Iseki",
+    "email": "iseki@rsch.tuis.ac.jp"
   },
   "files": [
     "lib/**/*.{d.ts,eot,gif,html,jpg,js,js.map,json,png,svg,woff2,ttf}",
