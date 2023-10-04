@@ -31,9 +31,9 @@ const Order = {
 export function turtle_init(block) {
   const xsz = BlocklyGene.valueToCode(block, 'XSIZE', Order.NONE) || "''";
   const ysz = BlocklyGene.valueToCode(block, 'YSIZE', Order.NONE) || "''";
-  const msg = 'from bturtle import *\n' +
+  const msg = 'from jbturtle import *\n' +
               'from math import * \n\n' +
-              'turtle = BTurtle(' + xsz + ', ' + ysz + ')\n';
+              'turtle = JBTurtle(' + xsz + ', ' + ysz + ')\n';
   return msg;
 };
 
