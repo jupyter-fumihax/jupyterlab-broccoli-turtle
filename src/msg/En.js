@@ -12,7 +12,10 @@ Blockly.Msg['BLOCK_TURTLE_YSIZE'] = 'Y size';
 Blockly.Msg['BLOCK_TURTLE_SPEED'] = 'turtle: line speed';
 Blockly.Msg['BLOCK_TURTLE_WIDTH'] = 'turtle: line width';
 Blockly.Msg['BLOCK_TURTLE_COLOR'] = 'turtle: line color';
-Blockly.Msg['BLOCK_TURTLE_HSV'] = 'turtle: line color (Hue)';
+Blockly.Msg['BLOCK_TURTLE_HSV'] = 'turtle: line hue H';
+Blockly.Msg['BLOCK_TURTLE_HSV_H'] = 'H';
+Blockly.Msg['BLOCK_TURTLE_HSV_S'] = 'S';
+Blockly.Msg['BLOCK_TURTLE_HSV_V'] = 'V';
 
 Blockly.Msg['BLOCK_TURTLE_PEN_UP'] = 'turtle: pen up';
 Blockly.Msg['BLOCK_TURTLE_PEN_DOWN'] = 'turtle: pen down';
