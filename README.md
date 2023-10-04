@@ -1,6 +1,7 @@
 # jupyterlab-broccoli-turtle
 
 * Simple turtle blocks for jupyterlab-broccoli
+* Attention: Almost impractical with FireFox because of FOUC. **Do not use with FireFox.**
 
 
 ## Requirement
