@@ -4,7 +4,7 @@
 * Attention: Almost impractical with FireFox because of FOUC. **Do not use with FireFox.**
 
 
-## Requirement
+## Requirements
 * Pillow
   * pip install Pillow
 * jbturtle >= 0.2.0
