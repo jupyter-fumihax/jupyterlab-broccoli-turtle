@@ -1,8 +1,9 @@
 # jupyterlab-broccoli-turtle
 
+* Simple turtle blocks for jupyterlab-broccoli
 
 
-## requirement
+## Requirement
 * Pillow
   * pip install Pillow
 * jbturtle >= 0.2.0
