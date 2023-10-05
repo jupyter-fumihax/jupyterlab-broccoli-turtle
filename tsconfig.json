@@ -18,6 +18,7 @@
     "outDir": "lib",
     "rootDir": "src",
     "target": "ES2018",
+    "skipLibCheck": true,
     "types": []
   },
   "include": ["src/**/*.ts", "src/**/*.js"],

@@ -18,8 +18,8 @@ import * as func_js from './javascript/func.js';
 const plugin: JupyterFrontEndPlugin<void> = {
   id: 'jupyterlab-broccoli-turtle:plugin',
   autoStart: true,
-  requires: [IBlocklyRegistry, /*ITranslator*/],
-  activate: (app: JupyterFrontEnd, register: IBlocklyRegistry, /*translator: ITranslator*/) => {
+  requires: [IBlocklyRegistry, ITranslator],
+  activate: (app: JupyterFrontEnd, register: IBlocklyRegistry, translator: ITranslator) => {
     console.log(
       'JupyterLab extension jupyterlab-broccoli-turtle is activated!'
     );
