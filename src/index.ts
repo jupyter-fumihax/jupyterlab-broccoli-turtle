@@ -35,7 +35,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
     });
     const trans = (translator || nullTranslator).load('jupyterlab');
 
-    register.registerToolbox(trans.__('turtle'), TOOLBOX);
+    register.registerToolbox(trans.__('Turtle'), TOOLBOX);
 
     register.registerCodes('python', func_python);
     register.registerCodes('javascript', func_js);
