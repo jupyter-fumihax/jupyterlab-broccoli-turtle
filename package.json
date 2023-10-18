@@ -1,6 +1,6 @@
 {
   "name": "jupyterlab-broccoli-turtle",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "description": "Simple Turtle Blocks of Blockly extension for JupyterLab.",
   "keywords": [
     "turtle",
