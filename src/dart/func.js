@@ -1,9 +1,18 @@
-
-//import { dartGenerator as BlocklyGene } from 'blockly/dart';
+//
+//import { dartGenerator as Dart } from 'blockly/dart';
 
 const notImplementedMsg = 'Not implemented at this Kernel';
 
-export function dummy_function(block, generator) {
+//
+export function getDartFunctions(generator) {
+  var funcs = {};
+
+//
+funcs['turtle_init'] = function(block) {
   alert(notImplementedMsg);
-  return notImplementedMsg;
+  return 'print(' + msg +');\n';
 };
+
+  //
+  return funcs;
+}

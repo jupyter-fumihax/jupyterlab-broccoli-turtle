@@ -1,9 +1,17 @@
-
-//import { luaGenerator as BlocklyGene } from 'blockly/lua';
+//
+//import { luaGenerator as Lua } from 'blockly/lua';
 
 const notImplementedMsg = 'Not implemented at this kernel';
 
-export function dummy_function(block, generator) {
+export function getLuaFunctions(generator) {
+  var funcs = {};
+
+//
+funcs['turtle_init'] = function(block) {
   alert(notImplementedMsg);
-  return notImplementedMsg;
+  return 'print(' +  notImplementedMsg + ');\n';
 };
+
+  //
+  return funcs;
+}

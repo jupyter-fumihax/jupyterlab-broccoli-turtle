@@ -14,12 +14,12 @@ export const TOOLBOX_TURTLE = {
             `<block type='turtle_init'>
                <value name='XSIZE'>
                  <shadow type='math_number'>
-                   <field name='NUM'>640</field>
+                   <field name='NUM'>600</field>
                  </shadow>
                </value>
                <value name='YSIZE'>
                  <shadow type='math_number'>
-                   <field name='NUM'>400</field>
+                   <field name='NUM'>600</field>
                  </shadow>
                </value>
              </block>`
@@ -133,12 +133,12 @@ export const TOOLBOX_TURTLE = {
             `<block type='turtle_move'>
                <value name='XPOS'>
                  <shadow type='math_number'>
-                   <field name='NUM'>0</field>
+                   <field name='NUM'>300</field>
                  </shadow>
                </value>
                <value name='YPOS'>
                  <shadow type='math_number'>
-                   <field name='NUM'>0</field>
+                   <field name='NUM'>300</field>
                  </shadow>
                </value>
              </block>`

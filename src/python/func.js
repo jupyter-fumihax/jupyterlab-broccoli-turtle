@@ -1,93 +1,76 @@
 
-import { pythonGenerator as BlocklyGene } from 'blockly/python';
+import { pythonGenerator as Python } from 'blockly/python';
 
-const Order = {
-  ATOMIC: 0,             // 0 "" ...
-  COLLECTION: 1,         // tuples, lists, dictionaries
-  STRING_CONVERSION: 1,  // `expression...`
-  MEMBER: 2.1,           // . []
-  FUNCTION_CALL: 2.2,    // ()
-  EXPONENTIATION: 3,     // **
-  UNARY_SIGN: 4,         // + -
-  BITWISE_NOT: 4,        // ~
-  MULTIPLICATIVE: 5,     // * / // %
-  ADDITIVE: 6,           // + -
-  BITWISE_SHIFT: 7,      // << >>
-  BITWISE_AND: 8,        // &
-  BITWISE_XOR: 9,        // ^
-  BITWISE_OR: 10,        // |
-  RELATIONAL: 11,        // in, not in, is, is not, >, >=, <>, !=, ==
-  LOGICAL_NOT: 12,       // not
-  LOGICAL_AND: 13,       // and
-  LOGICAL_OR: 14,        // or
-  CONDITIONAL: 15,       // if else
-  LAMBDA: 16,            // lambda
-  NONE: 99,              // (...)
-};
+
+export function getPythonFunctions(generator)
+{
+  var funcs = {};
+
 
 //
-//const notImplementedMsg = 'Not implemented at this Kernel';
-
-export function turtle_init(block) {
-  const xsz = BlocklyGene.valueToCode(block, 'XSIZE', Order.NONE) || "''";
-  const ysz = BlocklyGene.valueToCode(block, 'YSIZE', Order.NONE) || "''";
+funcs['turtle_init'] = function(block) {
+  const xsz = generator.valueToCode(block, 'XSIZE', Python.ORDER_NONE) || "600";
+  const ysz = generator.valueToCode(block, 'YSIZE', Python.ORDER_NONE) || "600";
   const msg = 'from jbturtle import *\n' +
               'from math import * \n\n' +
               'turtle = JBTurtle(' + xsz + ', ' + ysz + ')\n';
   return msg;
 };
 
-export function turtle_speed(block) {
-  const val = BlocklyGene.valueToCode(block, 'VAL', Order.NONE) || "''";
+funcs['turtle_speed'] = function(block) {
+  const val = generator.valueToCode(block, 'VAL', Python.ORDER_NONE) || "2";
   return 'turtle.speed(' + val + ')\n';
 };
 
-export function turtle_line_width(block) {
-  const val = BlocklyGene.valueToCode(block, 'VAL', Order.NONE) || "''";
+funcs['turtle_line_widt'] = function(block) {
+  const val = generator.valueToCode(block, 'VAL', Python.ORDER_NONE) || "2";
   return 'turtle.line_width(' + val + ')\n';
 };
 
-export function turtle_line_color(block) {
-  const val = BlocklyGene.valueToCode(block, 'VAL', Order.NONE) || "''";
+funcs['turtle_line_color'] = function(block) {
+  const val = generator.valueToCode(block, 'VAL', Python.ORDER_NONE) || "#000000";
   return 'turtle.line_color(' + val + ')\n';
 };
 
-export function turtle_line_hsv(block) {
-  const hh = BlocklyGene.valueToCode(block, 'H', Order.NONE) || "''";
-  const ss = BlocklyGene.valueToCode(block, 'S', Order.NONE) || "''";
-  const vv = BlocklyGene.valueToCode(block, 'V', Order.NONE) || "''";
+funcs['turtle_line_hsv'] = function(block) {
+  const hh = generator.valueToCode(block, 'H', Python.ORDER_NONE) || "0";
+  const ss = generator.valueToCode(block, 'S', Python.ORDER_NONE) || "0.45";
+  const vv = generator.valueToCode(block, 'V', Python.ORDER_NONE) || "0.65";
   return 'turtle.line_hsv(' + hh + ', ' + ss + ', ' + vv + ')\n';
 };
 
-export function turtle_pen_up(block) {
+funcs['turtle_pen_up'] = function(block) {
   return 'turtle.pen_up()\n';
 };
 
-export function turtle_pen_down(block) {
+funcs['turtle_pen_down'] = function(block) {
   return 'turtle.pen_down()\n';
 };
 
-export function turtle_forward(block) {
-  const val = BlocklyGene.valueToCode(block, 'VAL', Order.NONE) || "''";
+funcs['turtle_forward'] = function(block) {
+  const val = generator.valueToCode(block, 'VAL', Python.ORDER_NONE) || "100";
   return 'turtle.forward(' + val + ')\n';
 };
 
-export function turtle_turn_right(block) {
-  const val = BlocklyGene.valueToCode(block, 'VAL', Order.NONE) || "''";
+funcs['turtle_turn_right'] = function(block) {
+  const val = generator.valueToCode(block, 'VAL', Python.ORDER_NONE) || "90";
   return 'turtle.turn_right(' + val + ')\n';
 };
 
-export function turtle_turn_left(block) {
-  const val = BlocklyGene.valueToCode(block, 'VAL', Order.NONE) || "''";
+funcs['turtle_turn_left'] = function(block) {
+  const val = generator.valueToCode(block, 'VAL', Python.ORDER_NONE) || "90";
   return 'turtle.turn_left(' + val + ')\n';
 };
 
-export function turtle_move(block) {
-  const xp = BlocklyGene.valueToCode(block, 'XPOS', Order.NONE) || "''";
-  const yp = BlocklyGene.valueToCode(block, 'YPOS', Order.NONE) || "''";
+funcs['turtle_move'] = function(block) {
+  const xp = generator.valueToCode(block, 'XPOS', Python.ORDER_NONE) || "300";
+  const yp = generator.valueToCode(block, 'YPOS', Python.ORDER_NONE) || "300";
   return 'turtle.move(' + xp + ', ' + yp + ')\n';
 };
 
-/**/
+
+  //
+  return funcs;
+}
 
 
