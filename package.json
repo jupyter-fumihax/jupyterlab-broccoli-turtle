@@ -1,6 +1,6 @@
 {
   "name": "jupyterlab-broccoli-turtle",
-  "version": "0.4.0",
+  "version": "0.4.2",
   "description": "Simple Turtle Blocks of Blockly extension for JupyterLab.",
   "keywords": [
     "turtle",
@@ -71,8 +71,8 @@
     "@lumino/messaging": "^1.10.0",
     "@lumino/signaling": "^1.10.0",
     "@lumino/widgets": "^1.37.1",
-    "blockly": "^10.2.2",
-    "jupyterlab-broccoli": "^0.4.0",
+    "blockly": "^9.3.3",
+    "jupyterlab-broccoli": "^0.4.2",
     "patch-package": "^6.4.7",
     "postinstall-postinstall": "^2.1.0",
     "react": "^17.0.1",
