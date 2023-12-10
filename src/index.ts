@@ -27,7 +27,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
     const bregister = (register as BlocklyRegistry);
 
     // Localization 
-    const language = (register as BlocklyRegistry).language;
+    const language = bregister.language;
     import(`./msg/${language}.js`)
     .catch(() => {
       if (language !== 'En') {
@@ -37,7 +37,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
     });
     const trans = (translator || nullTranslator).load('jupyterlab');
 
-    register.registerToolbox(trans.__('Turtle'), TOOLBOX);
+    bregister.registerToolbox(trans.__('Turtle'), TOOLBOX);
 
     const fpython = getPythonFunctions(bregister.generators.get('python'));
     const fjavascript = getJsFunctions(bregister.generators.get('javascript'));
@@ -45,16 +45,19 @@ const plugin: JupyterFrontEndPlugin<void> = {
     //const flua = getLuaFunctions(bregister.generators.get('lua'));
     //const fdart = getDartFunctions(bregister.generators.get('dart'));
 
+    //while (bregister.lock) {};
+    //bregister.lock = true;
     // @ts-ignore
-    register.registerCodes('python', fpython);
+    bregister.registerCodes('python', fpython);
     // @ts-ignore
-    register.registerCodes('javascript', fjavascript);
+    bregister.registerCodes('javascript', fjavascript);
     // @ts-ignore
-    //register.registerCodes('php', fphp);
+    //bregister.registerCodes('php', fphp);
     // @ts-ignore
-    //register.registerCodes('lua', flua);
+    //bregister.registerCodes('lua', flua);
     // @ts-ignore
-    //register.registerCodes('dart', fdart);
+    //bregister.registerCodes('dart', fdart);
+    //bregister.lock = false;
   }
 };
 
