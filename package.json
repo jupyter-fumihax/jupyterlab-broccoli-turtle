@@ -9,9 +9,9 @@
     "jupyterlab",
     "jupyterlab-extension"
   ],
-  "homepage": "https://github.com/fiseki/jupyterlab-broccoli-turtle",
+  "homepage": "https://github.com/FumiHax/jupyterlab-broccoli-turtle",
   "bugs": {
-    "url": "https://github.com/fiseki/jupyterlab-broccoli-turtle/issues"
+    "url": "https://github.com/FumiHax/jupyterlab-broccoli-turtle/issues"
   },
   "license": "BSD-3-Clause",
   "author": {
@@ -27,7 +27,7 @@
   "style": "style/index.css",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fiseki/jupyterlab-broccoli-turtle.git"
+    "url": "https://github.com/FumiHax/jupyterlab-broccoli-turtle.git"
   },
   "scripts": {
     "build": "jlpm build:lib && jlpm build:labextension:dev",
