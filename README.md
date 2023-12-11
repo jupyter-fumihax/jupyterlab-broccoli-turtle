@@ -20,7 +20,7 @@ pip install jupyterlab-broccoli-turtle
 ```
 #### for JupyterLab 3.6.x
 ```
-pip install jupyterlab-broccoli==0.3.6
+pip install jupyterlab-broccoli==0.3.8
 pip install Pillow
 pip install jbturtle
 pip install jupyterlab-broccoli-turtle==0.2.0
