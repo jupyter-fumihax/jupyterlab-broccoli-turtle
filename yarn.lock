@@ -4450,7 +4450,7 @@ __metadata:
     eslint-config-prettier: ^8.4.0
     eslint-plugin-prettier: ^4.0.0
     eslint-plugin-react: ^7.30.0
-    jupyterlab-broccoli: ^0.4.4
+    jupyterlab-broccoli: ^0.4.5
     npm-run-all: ^4.1.5
     patch-package: ^6.4.7
     postinstall-postinstall: ^2.1.0
@@ -4468,9 +4468,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"jupyterlab-broccoli@npm:^0.4.4":
-  version: 0.4.4
-  resolution: "jupyterlab-broccoli@npm:0.4.4"
+"jupyterlab-broccoli@npm:^0.4.5":
+  version: 0.4.5
+  resolution: "jupyterlab-broccoli@npm:0.4.5"
   dependencies:
     "@jupyterlab/application": ^4.0.9
     "@jupyterlab/apputils": ^4.1.9
@@ -4493,7 +4493,7 @@ __metadata:
     "@types/react": ^18.2.41
     blockly: ^9.3.3
     highlight.js: ^11.9.0
-  checksum: 409054db6a17464ff7587e08cab9366b335231a6f8fb1a08ef15ff87ee4706433f869a2f901bf88c799a37214146562de50a25ac326c7ba966d5b9307213a28d
+  checksum: 45e05a80fd549da3e99ae01b1832baf36bb7817c8ddc1edb88ad28fbe831dede00ce9a62e8b2b63d19f042dbe47e761534389a78388b2ccfe7897675fc45b93f
   languageName: node
   linkType: hard
 
