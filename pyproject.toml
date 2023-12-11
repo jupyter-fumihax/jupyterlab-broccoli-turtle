@@ -23,7 +23,7 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
 ]
 dependencies = [
- "jupyterlab-broccoli>=0.4.4",
+ "jupyterlab-broccoli>=0.4.5",
 ]
 dynamic = ["version", "description", "authors", "urls", "keywords"]
 
