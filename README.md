@@ -10,6 +10,9 @@
 * jbturtle >= 0.2.0
   * pip install jbturtle
 
+## PyPI Project
+* https://pypi.org/project/jupyterlab-broccoli-turtle
+
 ## Install
 #### for JupyterLab 4.0.x
 ```
