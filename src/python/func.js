@@ -22,7 +22,7 @@ funcs['turtle_speed'] = function(block) {
   return 'turtle.speed(' + val + ')\n';
 };
 
-funcs['turtle_line_widt'] = function(block) {
+funcs['turtle_line_width'] = function(block) {
   const val = generator.valueToCode(block, 'VAL', Python.ORDER_NONE) || "2";
   return 'turtle.line_width(' + val + ')\n';
 };
